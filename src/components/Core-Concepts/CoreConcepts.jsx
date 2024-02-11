@@ -25,23 +25,25 @@ const ListItem = styled.li`
   text-align: center;
 `;
 
-export const CoreConcepts = () => {
+export default function CoreConcepts() {
   const concepts = coreConceptsData;
 
   return (
     <>
-      <Container>
-        <CenterText>
-          <H2>Core Concepts</H2>
-        </CenterText>
-        <UnorderedList>
-          {concepts.map((concept) => (
-            <ListItem key={concept.title}>
-              <CoreConcept {...concept}></CoreConcept>
-            </ListItem>
-          ))}
-        </UnorderedList>
-      </Container>
+      <section id="core-concepts">
+        <Container>
+          <CenterText>
+            <H2>Core Concepts</H2>
+          </CenterText>
+          <UnorderedList>
+            {concepts.map((concept) => (
+              <ListItem key={concept.title}>
+                <CoreConcept {...concept}></CoreConcept>
+              </ListItem>
+            ))}
+          </UnorderedList>
+        </Container>
+      </section>
     </>
   );
-};
+}

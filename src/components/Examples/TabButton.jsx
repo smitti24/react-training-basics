@@ -1,10 +1,10 @@
 import "./TabButton.scss";
 
-export const TabButton = ({ children, onClick, isSelected }) => {
+export const TabButton = ({ children, isSelected, ...props }) => {
   return (
     <>
       <li>
-        <button className={isSelected && "active"} onClick={onClick}>
+        <button className={isSelected ? "active" : ""} {...props}>
           {children}
         </button>
       </li>

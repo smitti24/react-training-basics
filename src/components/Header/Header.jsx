@@ -7,7 +7,7 @@ const getRandomDescription = (array) => {
   return randomDescriptions[Math.floor(Math.random() * array.length)];
 };
 
-export const Header = ({ text }) => {
+export default function Header({ text }) {
   const description = getRandomDescription(randomDescriptions);
   return (
     <header>
@@ -19,7 +19,7 @@ export const Header = ({ text }) => {
       </p>
     </header>
   );
-};
+}
 
 // export function Header({ text }) {
 //   return (
