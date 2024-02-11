@@ -16,9 +16,9 @@ export default function Buttons() {
     <>
       <Section title="Buttons" id="buttons">
         <div className="text-center">
-          <button className="button filled-button " onClick={handleShowButtons}>
-            Show/Hide Buttons
-          </button>
+          <Button mode="filled" onClick={handleShowButtons}>
+            <span>{showButtons ? "Hide Buttons" : "Show Buttons"}</span>
+          </Button>
         </div>
 
         {showButtons && (
